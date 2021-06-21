@@ -2,7 +2,7 @@
 (
     -- Base
 	[ID] INT NOT NULL IDENTITY, 
-    [Email] NVARCHAR(200) NOT NULL, 
+    [Email] NVARCHAR(384) NOT NULL, 
     [Password] BINARY(64) NOT NULL, 
     [Nickname] NVARCHAR(20) NOT NULL,
     [Lastname] NVARCHAR(50) NULL, 

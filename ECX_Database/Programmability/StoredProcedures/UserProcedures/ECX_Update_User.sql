@@ -1,6 +1,6 @@
 ﻿CREATE PROCEDURE [dbo].[ECX_Update_User]
 	@id INT,
-	@email NVARCHAR(200),
+	@email NVARCHAR(384),
 	@password NVARCHAR(20),
 	@nickName NVARCHAR(20),
 	@lastName NVARCHAR(50),

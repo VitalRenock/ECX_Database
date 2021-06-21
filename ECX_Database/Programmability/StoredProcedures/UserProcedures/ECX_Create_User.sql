@@ -1,5 +1,5 @@
 ﻿CREATE PROCEDURE [dbo].[ECX_Create_User]
-	@email NVARCHAR(200),
+	@email NVARCHAR(384),
 	@password NVARCHAR(20),
 	@nickName NVARCHAR(20),
 	@lastName NVARCHAR(50),

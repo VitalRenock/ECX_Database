@@ -23,7 +23,7 @@ EXEC [ECX_Create_Role]
 
 -- Création des Utilisateurs
 EXEC [ECX_Create_User] 
-@email = 'renaud.mail.com', 
+@email = 'renaud@mail.com', 
 @password = 'test=1111', 
 @nickName = 'VitalRenock', 
 @lastName = 'Brigode', 
@@ -31,7 +31,7 @@ EXEC [ECX_Create_User]
 @role_ID = 1;
 
 EXEC [ECX_Create_User] 
-@email = 'mexojer.mail.com', 
+@email = 'mexojer@mail.com', 
 @password = 'test=2222', 
 @nickName = 'Mexojer', 
 @lastName = 'Thunus', 
@@ -39,7 +39,7 @@ EXEC [ECX_Create_User]
 @role_ID = 2;
 
 EXEC [ECX_Create_User] 
-@email = 'momo.mail.com', 
+@email = 'momo@mail.com', 
 @password = 'test=3333', 
 @nickName = 'Momo', 
 @lastName = 'Lechat', 

@@ -1,3 +1,9 @@
 ﻿CREATE VIEW [dbo].[ECX_View_AllUsers]
 AS 
-	SELECT * FROM [User];
+	SELECT 
+		[Email], 
+		[Password], 
+		[Nickname], 
+		[Lastname],
+		[Firstname]
+	FROM [User];

@@ -28,8 +28,7 @@ EXEC [ECX_Create_User]
 @nickName = 'VitalRenock', 
 @lastName = 'Brigode', 
 @firstName = 'Renaud', 
-@role_ID = 1,
-@responseMessage = @response OUTPUT;
+@role_ID = 1;
 
 EXEC [ECX_Create_User] 
 @email = 'mexojer.mail.com', 
@@ -37,8 +36,7 @@ EXEC [ECX_Create_User]
 @nickName = 'Mexojer', 
 @lastName = 'Thunus', 
 @firstName = 'Jérôme', 
-@role_ID = 2,
-@responseMessage = @response OUTPUT;
+@role_ID = 2;
 
 EXEC [ECX_Create_User] 
 @email = 'momo.mail.com', 
@@ -46,8 +44,7 @@ EXEC [ECX_Create_User]
 @nickName = 'Momo', 
 @lastName = 'Lechat', 
 @firstName = 'Maurice', 
-@role_ID = 3,
-@responseMessage = @response OUTPUT;
+@role_ID = 3;
 
 
 

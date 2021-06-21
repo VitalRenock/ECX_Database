@@ -87,6 +87,7 @@
     <Build Include="Programmability\StoredProcedures\NoteCompoProcedures\ECX_Create_NoteComposition.sql" />
     <Build Include="Views\UserViews\ECX_View_AllUsers.sql" />
     <Build Include="Views\NoteViews\ECX_View_AllNotes.sql" />
+    <Build Include="Programmability\StoredProcedures\UserProcedures\ECX_Login_User.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment1.sql" />

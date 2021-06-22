@@ -4,5 +4,6 @@ AS
 BEGIN
 	
 	DELETE FROM [User] WHERE [ID] = @id;
+	RETURN 0;
 
 END

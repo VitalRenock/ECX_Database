@@ -1,9 +1,9 @@
-﻿CREATE PROCEDURE [dbo].[ECX_Create_User]
+﻿CREATE PROCEDURE [dbo].[ECX_Register_User]
 	@email NVARCHAR(384),
 	@password NVARCHAR(20),
-	@nickName NVARCHAR(20),
-	@lastName NVARCHAR(50),
-	@firstName NVARCHAR(50),
+	@nickname NVARCHAR(20),
+	@lastname NVARCHAR(50),
+	@firstname NVARCHAR(50),
 	@role_ID NVARCHAR(20)
 AS
 BEGIN
@@ -12,9 +12,9 @@ BEGIN
 	(
 		@email, 
 		HASHBYTES('SHA2_512', [dbo].[ECX_GetPreSalt]() + @password + [dbo].[ECX_GetPostSalt]()), 
-		@nickName, 
-		@lastName, 
-		@firstName,
+		@nickname, 
+		@lastname, 
+		@firstname,
 		@role_ID
 	);
 	RETURN 0;

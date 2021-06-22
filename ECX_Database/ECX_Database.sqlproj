@@ -74,7 +74,7 @@
   <ItemGroup>
     <Build Include="Programmability\Functions\ECX_GetPreSalt.sql" />
     <Build Include="Programmability\Functions\ECX_GetPostSalt.sql" />
-    <Build Include="Programmability\StoredProcedures\UserProcedures\ECX_Create_User.sql" />
+    <Build Include="Programmability\StoredProcedures\UserProcedures\ECX_Register_User.sql" />
     <Build Include="Tables\User.sql" />
     <Build Include="Tables\Role.sql" />
     <Build Include="Tables\Component.sql" />

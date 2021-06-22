@@ -91,6 +91,7 @@
     <Build Include="Programmability\StoredProcedures\UserProcedures\ECX_Login_User.sql" />
     <Build Include="Programmability\StoredProcedures\UserProcedures\ECX_Delete_User.sql" />
     <Build Include="Programmability\Triggers\Trigger_Delete_User.sql" />
+    <Build Include="Programmability\StoredProcedures\UserProcedures\ECX_SetRole_User.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment1.sql" />

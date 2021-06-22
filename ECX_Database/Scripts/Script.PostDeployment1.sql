@@ -27,24 +27,36 @@ EXEC [ECX_Register_User]
 @password = 'test=1111', 
 @nickname = 'VitalRenock', 
 @lastname = 'Brigode', 
-@firstname = 'Renaud', 
-@role_ID = 1;
+@firstname = 'Renaud';
+
+DECLARE @user_id INT = (SELECT [ID] FROM [User] WHERE [Nickname] = 'VitalRenock');
+EXEC [ECX_SetRole_User]
+@user_ID = @user_id,
+@role_name = 'Administrateur';
 
 EXEC [ECX_Register_User] 
 @email = 'mexojer@mail.com', 
 @password = 'test=2222', 
 @nickname = 'Mexojer', 
 @lastname = 'Thunus', 
-@firstname = 'Jérôme', 
-@role_ID = 2;
+@firstname = 'Jérôme';
+
+SET @user_id = (SELECT [ID] FROM [User] WHERE [Nickname] = 'Mexojer');
+EXEC [ECX_SetRole_User]
+@user_ID = @user_id,
+@role_name = 'Modérateur';
 
 EXEC [ECX_Register_User] 
 @email = 'momo@mail.com', 
 @password = 'test=3333', 
 @nickname = 'Momo', 
 @lastname = 'Lechat', 
-@firstname = 'Maurice', 
-@role_ID = 3;
+@firstname = 'Maurice';
+
+SET @user_id = (SELECT [ID] FROM [User] WHERE [Nickname] = 'Momo');
+EXEC [ECX_SetRole_User]
+@user_ID = @user_id,
+@role_name = 'Rédacteur';
 
 
 

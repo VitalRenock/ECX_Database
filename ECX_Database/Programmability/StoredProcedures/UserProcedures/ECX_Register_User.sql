@@ -3,8 +3,7 @@
 	@password NVARCHAR(20),
 	@nickname NVARCHAR(20),
 	@lastname NVARCHAR(50),
-	@firstname NVARCHAR(50),
-	@role_ID NVARCHAR(20)
+	@firstname NVARCHAR(50)
 AS
 BEGIN
 
@@ -15,7 +14,8 @@ BEGIN
 		@nickname, 
 		@lastname, 
 		@firstname,
-		@role_ID
+		-- On va rechercher l'ID du rôle de "Rédacteur" pour l'attribuer par défaut à un nouveau "User".
+		(SELECT [ID] FROM [Role] WHERE [Name] = 'Rédacteur')
 	);
 	RETURN 0;
 

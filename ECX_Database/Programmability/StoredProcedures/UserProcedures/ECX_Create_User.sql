@@ -8,13 +8,13 @@
 AS
 BEGIN
 
-	INSERT INTO [User]([Email], [Password], [Nickname], [Lastname], [Firstname], [Role_ID] ) VALUES 
+	INSERT INTO [User]([Email], [Password], [Nickname], [Lastname], [Firstname], [Role_ID]) VALUES 
 	(
 		@email, 
 		HASHBYTES('SHA2_512', [dbo].[ECX_GetPreSalt]() + @password + [dbo].[ECX_GetPostSalt]()), 
 		@nickName, 
 		@lastName, 
-		@firstName, 
+		@firstName,
 		@role_ID
 	);
 	RETURN 0;

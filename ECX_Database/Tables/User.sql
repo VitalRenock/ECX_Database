@@ -3,10 +3,13 @@
     -- Base
 	[ID] INT NOT NULL IDENTITY, 
     [Email] NVARCHAR(384) NOT NULL, 
-    [Password] BINARY(64) NOT NULL, 
+    [Password] VARBINARY(64) NOT NULL, 
     [Nickname] NVARCHAR(20) NOT NULL,
     [Lastname] NVARCHAR(50) NULL, 
     [Firstname] NVARCHAR(50) NULL,
+
+    -- Active System
+    [IsActive] INT NOT NULL DEFAULT 1,
 
     -- Foreign Keys
     [Role_ID] INT NOT NULL,

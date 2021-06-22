@@ -69,6 +69,7 @@
     <Folder Include="Programmability\StoredProcedures\NoteCompoProcedures" />
     <Folder Include="Views\UserViews" />
     <Folder Include="Views\NoteViews" />
+    <Folder Include="Programmability\Triggers" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Programmability\Functions\ECX_GetPreSalt.sql" />
@@ -88,6 +89,8 @@
     <Build Include="Views\UserViews\ECX_View_AllUsers.sql" />
     <Build Include="Views\NoteViews\ECX_View_AllNotes.sql" />
     <Build Include="Programmability\StoredProcedures\UserProcedures\ECX_Login_User.sql" />
+    <Build Include="Programmability\StoredProcedures\UserProcedures\ECX_Delete_User.sql" />
+    <Build Include="Programmability\Triggers\Trigger_Delete_User.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment1.sql" />

@@ -8,4 +8,5 @@ AS
 		[CommentaryReview],
 		[ParentNote_ID],
 		[User_ID]
-	FROM [Note];
+	FROM [Note]
+	WHERE [Enable] = 1;

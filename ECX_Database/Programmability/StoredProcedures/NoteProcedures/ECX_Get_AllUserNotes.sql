@@ -6,7 +6,18 @@ BEGIN
 	IF(EXISTS(SELECT * FROM [Note] WHERE [User_ID] = @user_id))
 	BEGIN
 
-		SELECT * FROM [Note] WHERE [User_ID] = @user_id;
+		SELECT
+			[ID],
+			[Title],
+			[Public],
+			[StateReview],
+			[CommentaryReview],
+			[ParentNote_ID],
+			[User_ID]
+		FROM [Note] 
+		WHERE [User_ID] = @user_id
+		AND [Enable] = 1;
 
 	END
+
 END

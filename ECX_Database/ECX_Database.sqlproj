@@ -96,6 +96,8 @@
     <Build Include="Programmability\StoredProcedures\NoteProcedures\ECX_Get_PublicUserNotes.sql" />
     <Build Include="Programmability\StoredProcedures\NoteProcedures\ECX_Delete_Note.sql" />
     <Build Include="Programmability\Triggers\Trigger_Delete_Note.sql" />
+    <Build Include="Programmability\Functions\ECX_TransformZeroToNull.sql" />
+    <Build Include="Programmability\Triggers\Trigger_Create_Note.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment1.sql" />

@@ -4,20 +4,17 @@
 EXEC [ECX_Create_Role]
 @name = 'Administrateur',
 @color = '#333333',
-@description = 'Responsable des Utilisateurs et Notes du site.',
-@responseMessage = @response OUTPUT;
+@description = 'Responsable des Utilisateurs et Notes du site.';
 
 EXEC [ECX_Create_Role]
 @name = 'Modérateur',
 @color = '#666666',
-@description = 'En charge de la modération des Notes du site',
-@responseMessage = @response OUTPUT;
+@description = 'En charge de la modération des Notes du site';
 
 EXEC [ECX_Create_Role]
 @name = 'Rédacteur',
 @color = '#999999',
-@description = 'En charge de la rédaction des Notes du site',
-@responseMessage = @response OUTPUT;
+@description = 'En charge de la rédaction des Notes du site';
 
 
 
@@ -65,23 +62,25 @@ EXEC [ECX_Create_Note]
 @title = 'Ma première Note',
 @public = 1,
 @parentNote_ID = NULL,
-@user_ID = 1,
-@responseMessage = @response OUTPUT;
+@user_ID = 1;
 
 EXEC [ECX_Create_Note]
 @title = 'Ma deuxième Note',
 @public = 0,
 @parentNote_ID = 1,
-@user_ID = 1,
-@responseMessage = @response OUTPUT;
+@user_ID = 1;
 
 EXEC [ECX_Create_Note]
 @title = 'Ma troisième Note',
 @public = 1,
 @parentNote_ID = 1,
-@user_ID = 1,
-@responseMessage = @response OUTPUT;
+@user_ID = 1;
 
+EXEC [ECX_Create_Note]
+@title = 'Ma quatrième Note',
+@public = 1,
+@parentNote_ID = NULL,
+@user_ID = 2;
 
 
 -- Création des Composants

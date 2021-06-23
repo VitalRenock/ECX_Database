@@ -7,7 +7,7 @@
 		PRINT('Trigger déclenché');
 
 		UPDATE [User]
-		SET [IsActive] = 0
+		SET [Enable] = 0
 		WHERE [ID] = (SELECT [ID] FROM deleted);
 
 	END

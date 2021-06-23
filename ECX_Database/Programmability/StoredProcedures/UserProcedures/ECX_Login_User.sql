@@ -12,7 +12,7 @@ BEGIN
 			FROM [User] 
 			WHERE [Email] = @email
 			AND [Password] = HASHBYTES('SHA2_512', [dbo].[ECX_GetPreSalt]() + @password + [dbo].[ECX_GetPostSalt]())
-			AND [IsActive] = 1
+			AND [Enable] = 1
 			)
 	)
 	BEGIN

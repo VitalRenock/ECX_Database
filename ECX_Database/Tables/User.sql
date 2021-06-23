@@ -9,7 +9,7 @@
     [Firstname] NVARCHAR(50) NULL,
 
     -- Active System
-    [IsActive] INT NOT NULL DEFAULT 1,
+    [Enable] BIT NOT NULL DEFAULT 1,
 
     -- Foreign Keys
     [Role_ID] INT NOT NULL,

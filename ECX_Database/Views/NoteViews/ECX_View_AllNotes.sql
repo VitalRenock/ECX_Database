@@ -1,3 +1,11 @@
 ﻿CREATE VIEW [dbo].[ECX_View_AllNotes]
 AS 
-	SELECT * FROM [Note];
+	SELECT 
+		[ID],
+		[Title],
+		[Public],
+		[StateReview],
+		[CommentaryReview],
+		[ParentNote_ID],
+		[User_ID]
+	FROM [Note];

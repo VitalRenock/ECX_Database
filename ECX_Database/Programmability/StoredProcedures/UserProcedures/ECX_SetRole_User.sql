@@ -16,7 +16,7 @@ BEGIN
 		SET [Role_ID] = (SELECT [ID] FROM [Role] WHERE [Name] = @role_name)
 		WHERE [ID] = @user_ID;
 
-		RETURN 0;
+		RETURN 1;
 
 	END
 

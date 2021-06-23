@@ -18,9 +18,9 @@
     [CommentaryReview] NVARCHAR(200) NULL,
 
 	-- History System
-    [SysStartTime] DATETIME2 GENERATED ALWAYS AS ROW START NOT NULL,
-    [SysEndTime] DATETIME2 GENERATED ALWAYS AS ROW END NOT NULL,
-    PERIOD FOR SYSTEM_TIME ([SysStartTime], [SysEndTime]),
+    --[SysStartTime] DATETIME2 GENERATED ALWAYS AS ROW START NOT NULL,
+    --[SysEndTime] DATETIME2 GENERATED ALWAYS AS ROW END NOT NULL,
+    --PERIOD FOR SYSTEM_TIME ([SysStartTime], [SysEndTime]),
 
 	-- Foreign Keys
 	[User_ID] INT NOT NULL,
@@ -30,4 +30,5 @@
 	CONSTRAINT [CK_Component_StateReview] CHECK ([StateReview] IN ('Valid', 'WaitReview', 'WaitVerification')),
 	CONSTRAINT [FK_User_ID] FOREIGN KEY ([User_ID]) REFERENCES [User]([ID])
 )
-WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.Component_History, DATA_CONSISTENCY_CHECK = ON));
+--WITH (SYSTEM_VERSIONING = OFF);
+--WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.Component_History, DATA_CONSISTENCY_CHECK = ON));

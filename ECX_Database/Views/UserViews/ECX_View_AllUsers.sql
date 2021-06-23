@@ -9,4 +9,4 @@ AS
 		R.[Name]
 	FROM [User] U
 	LEFT JOIN [Role] R ON U.Role_ID = R.ID
-	WHERE U.IsActive = 1
+	WHERE U.[Enable] = 1

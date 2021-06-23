@@ -9,8 +9,7 @@
     <ProjectGuid>{e6563284-3adb-4c2f-9f5b-24dd528fea1e}</ProjectGuid>
     <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
-    <RootPath>
-    </RootPath>
+    <RootPath />
     <RootNamespace>ECX_Database</RootNamespace>
     <AssemblyName>ECX_Database</AssemblyName>
     <ModelCollation>1033, CI</ModelCollation>
@@ -48,7 +47,6 @@
   </PropertyGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
-    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
     <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
     <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
   </PropertyGroup>
@@ -92,6 +90,12 @@
     <Build Include="Programmability\StoredProcedures\UserProcedures\ECX_Delete_User.sql" />
     <Build Include="Programmability\Triggers\Trigger_Delete_User.sql" />
     <Build Include="Programmability\StoredProcedures\UserProcedures\ECX_SetRole_User.sql" />
+    <Build Include="Programmability\StoredProcedures\NoteProcedures\ECX_Update_Note.sql" />
+    <Build Include="Programmability\StoredProcedures\NoteProcedures\ECX_SetVisibility_Note.sql" />
+    <Build Include="Programmability\StoredProcedures\NoteProcedures\ECX_Get_AllUserNotes.sql" />
+    <Build Include="Programmability\StoredProcedures\NoteProcedures\ECX_Get_PublicUserNotes.sql" />
+    <Build Include="Programmability\StoredProcedures\NoteProcedures\ECX_Delete_Note.sql" />
+    <Build Include="Programmability\Triggers\Trigger_Delete_Note.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment1.sql" />

@@ -68,6 +68,7 @@
     <Folder Include="Views\UserViews" />
     <Folder Include="Views\NoteViews" />
     <Folder Include="Programmability\Triggers" />
+    <Folder Include="Programmability\StoredProcedures\Testing" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Programmability\Functions\ECX_GetPreSalt.sql" />
@@ -98,6 +99,14 @@
     <Build Include="Programmability\Triggers\Trigger_Delete_Note.sql" />
     <Build Include="Programmability\Functions\ECX_TransformZeroToNull.sql" />
     <Build Include="Programmability\Triggers\Trigger_Create_Note.sql" />
+    <Build Include="Programmability\StoredProcedures\Testing\ECX_Populate_User.sql" />
+    <Build Include="Programmability\Functions\ECX_GetRandomName.sql" />
+    <Build Include="Programmability\StoredProcedures\ComponentProcedures\ECX_Update_Component.sql" />
+    <Build Include="Programmability\StoredProcedures\ComponentProcedures\ECX_Delete_Component.sql" />
+    <Build Include="Programmability\Triggers\Trigger_Delete_Component.sql" />
+    <Build Include="Programmability\StoredProcedures\ComponentProcedures\ECX_Get_AllUserComponents.sql" />
+    <Build Include="Programmability\StoredProcedures\ComponentProcedures\ECX_Get_PublicUserComponents.sql" />
+    <Build Include="Programmability\StoredProcedures\ComponentProcedures\ECX_SetVisibility_Component.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment1.sql" />

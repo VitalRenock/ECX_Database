@@ -12,6 +12,4 @@ BEGIN
 			[Firstname] = @firstname
 		WHERE [ID] = @id;
 		
-		RETURN 0;
-
 END

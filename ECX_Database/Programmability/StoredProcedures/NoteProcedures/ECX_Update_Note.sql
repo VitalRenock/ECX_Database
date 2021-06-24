@@ -7,7 +7,9 @@ BEGIN
 	IF(EXISTS(SELECT * FROM [Note] WHERE [ID] = @id))
 	BEGIN
 
-		UPDATE [Note] SET [Title] = @title WHERE [ID] = @id;
+		UPDATE [Note] 
+		SET [Title] = @title 
+		WHERE [ID] = @id;
 
 	END
 

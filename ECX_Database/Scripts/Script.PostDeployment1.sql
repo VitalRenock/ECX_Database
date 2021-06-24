@@ -19,6 +19,10 @@ EXEC [ECX_Create_Role]
 
 
 -- Création des Utilisateurs
+
+--EXEC [ECX_Populate_User]
+--@iteration = 5;
+
 EXEC [ECX_Register_User] 
 @email = 'renaud@mail.com', 
 @password = 'test=1111', 
@@ -91,8 +95,7 @@ EXECUTE [ECX_Create_Component]
 @description = 'Description de test 1',
 @url = 'www.monsite.com',
 @public = 1,
-@user_ID = 1,
-@responseMessage = @response OUTPUT;
+@user_ID = 1
 
 EXECUTE [ECX_Create_Component] 
 @title = 'Mon deuxième Composant',
@@ -101,8 +104,7 @@ EXECUTE [ECX_Create_Component]
 @description = 'Description de test 2',
 @url = 'www.monsite.com',
 @public = 1,
-@user_ID = 1,
-@responseMessage = @response OUTPUT;
+@user_ID = 1
 
 EXECUTE [ECX_Create_Component] 
 @title = 'Mon troisième Composant',
@@ -111,8 +113,7 @@ EXECUTE [ECX_Create_Component]
 @description = 'Description de test 3',
 @url = 'www.monsite.com',
 @public = 1,
-@user_ID = 1,
-@responseMessage = @response OUTPUT;
+@user_ID = 1
 
 
 

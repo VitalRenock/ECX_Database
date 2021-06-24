@@ -13,6 +13,9 @@
 	-- Visibility System
 	[Public] BIT DEFAULT 0,
 
+    -- Active System (Disable = 0 / Enable = 1)
+    [Enable] BIT DEFAULT 1,
+
 	-- Review system
 	[StateReview] NVARCHAR(12) DEFAULT 'Valid',
     [CommentaryReview] NVARCHAR(200) NULL,

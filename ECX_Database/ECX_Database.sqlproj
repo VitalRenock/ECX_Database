@@ -69,6 +69,7 @@
     <Folder Include="Views\NoteViews" />
     <Folder Include="Programmability\Triggers" />
     <Folder Include="Programmability\StoredProcedures\Testing" />
+    <Folder Include="Views\ComponentViews" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Programmability\Functions\ECX_GetPreSalt.sql" />
@@ -107,6 +108,7 @@
     <Build Include="Programmability\StoredProcedures\ComponentProcedures\ECX_Get_AllUserComponents.sql" />
     <Build Include="Programmability\StoredProcedures\ComponentProcedures\ECX_Get_PublicUserComponents.sql" />
     <Build Include="Programmability\StoredProcedures\ComponentProcedures\ECX_SetVisibility_Component.sql" />
+    <Build Include="Views\ComponentViews\ECX_View_AllComponents.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment1.sql" />

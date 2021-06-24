@@ -103,7 +103,7 @@ EXECUTE [ECX_Create_Component]
 @short = 'C#',
 @description = 'Description de test 2',
 @url = 'www.monsite.com',
-@public = 1,
+@public = 0,
 @user_ID = 1
 
 EXECUTE [ECX_Create_Component] 
@@ -114,6 +114,15 @@ EXECUTE [ECX_Create_Component]
 @url = 'www.monsite.com',
 @public = 1,
 @user_ID = 1
+
+EXECUTE [ECX_Create_Component] 
+@title = 'Mon quatrième Composant',
+@content = 'Contenu de test 4',
+@short = 'C#',
+@description = 'Description de test 4',
+@url = 'www.monsite.com',
+@public = 1,
+@user_ID = 2
 
 
 

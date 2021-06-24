@@ -12,7 +12,9 @@ BEGIN
 			[Content],
 			[Short],
 			[Description],
-			[Url]
+			[Url],
+			[Public],
+			[User_ID]
 		FROM [Component] 
 		WHERE [User_ID] = @user_id
 		AND [Enable] = 1

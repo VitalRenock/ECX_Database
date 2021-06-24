@@ -70,6 +70,7 @@
     <Folder Include="Programmability\Triggers" />
     <Folder Include="Programmability\StoredProcedures\Testing" />
     <Folder Include="Views\ComponentViews" />
+    <Folder Include="Views\RoleViews" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Programmability\Functions\ECX_GetPreSalt.sql" />
@@ -85,7 +86,7 @@
     <Build Include="Programmability\StoredProcedures\RoleProcedures\ECX_Update_Role.sql" />
     <Build Include="Programmability\StoredProcedures\ComponentProcedures\ECX_Create_Component.sql" />
     <Build Include="Programmability\StoredProcedures\NoteProcedures\ECX_Create_Note.sql" />
-    <Build Include="Programmability\StoredProcedures\NoteCompoProcedures\ECX_Create_NoteComposition.sql" />
+    <Build Include="Programmability\StoredProcedures\NoteCompoProcedures\ECX_Add_ComponentToNote.sql" />
     <Build Include="Views\UserViews\ECX_View_AllUsers.sql" />
     <Build Include="Views\NoteViews\ECX_View_AllNotes.sql" />
     <Build Include="Programmability\StoredProcedures\UserProcedures\ECX_Login_User.sql" />
@@ -109,6 +110,11 @@
     <Build Include="Programmability\StoredProcedures\ComponentProcedures\ECX_Get_PublicUserComponents.sql" />
     <Build Include="Programmability\StoredProcedures\ComponentProcedures\ECX_SetVisibility_Component.sql" />
     <Build Include="Views\ComponentViews\ECX_View_AllComponents.sql" />
+    <Build Include="Programmability\StoredProcedures\NoteCompoProcedures\ECX_Remove_ComponentToNote.sql" />
+    <Build Include="Programmability\StoredProcedures\RoleProcedures\ECX_Delete_Role.sql" />
+    <Build Include="Programmability\Triggers\Trigger_Delete_Role.sql" />
+    <Build Include="Programmability\StoredProcedures\RoleProcedures\ECX_Get_Role.sql" />
+    <Build Include="Views\RoleViews\ECX_View_AllRoles.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment1.sql" />

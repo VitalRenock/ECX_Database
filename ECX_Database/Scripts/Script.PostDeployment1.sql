@@ -1,6 +1,4 @@
-﻿DECLARE @response NVARCHAR(250);
-
--- Création des Rôles
+﻿-- Création des Rôles
 EXEC [ECX_Create_Role]
 @name = 'Administrateur',
 @color = '#333333',
@@ -95,7 +93,7 @@ EXECUTE [ECX_Create_Component]
 @description = 'Description de test 1',
 @url = 'www.monsite.com',
 @public = 1,
-@user_ID = 1
+@user_ID = 1;
 
 EXECUTE [ECX_Create_Component] 
 @title = 'Mon deuxième Composant',
@@ -104,7 +102,7 @@ EXECUTE [ECX_Create_Component]
 @description = 'Description de test 2',
 @url = 'www.monsite.com',
 @public = 0,
-@user_ID = 1
+@user_ID = 1;
 
 EXECUTE [ECX_Create_Component] 
 @title = 'Mon troisième Composant',
@@ -113,7 +111,7 @@ EXECUTE [ECX_Create_Component]
 @description = 'Description de test 3',
 @url = 'www.monsite.com',
 @public = 1,
-@user_ID = 1
+@user_ID = 1;
 
 EXECUTE [ECX_Create_Component] 
 @title = 'Mon quatrième Composant',
@@ -122,22 +120,19 @@ EXECUTE [ECX_Create_Component]
 @description = 'Description de test 4',
 @url = 'www.monsite.com',
 @public = 1,
-@user_ID = 2
+@user_ID = 2;
 
 
 
 -- Composition des Notes
-EXEC [ECX_Create_NoteComposition]
+EXEC [ECX_Add_ComponentToNote]
 @note_ID = 1,
-@Component_ID = 1,
-@responseMessage = @response OUTPUT;
+@Component_ID = 1;
 
-EXEC [ECX_Create_NoteComposition]
+EXEC [ECX_Add_ComponentToNote]
 @note_ID = 1,
-@Component_ID = 2,
-@responseMessage = @response OUTPUT;
+@Component_ID = 2;
 
-EXEC [ECX_Create_NoteComposition]
+EXEC [ECX_Add_ComponentToNote]
 @note_ID = 1,
-@Component_ID = 3,
-@responseMessage = @response OUTPUT;
+@Component_ID = 3;

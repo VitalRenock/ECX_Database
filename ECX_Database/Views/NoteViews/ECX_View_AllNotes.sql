@@ -9,4 +9,4 @@ AS
 		[ParentNote_ID],
 		[User_ID]
 	FROM [Note]
-	WHERE [Enable] = 1;
+	WHERE [Enable] = 1

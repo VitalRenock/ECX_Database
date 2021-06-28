@@ -62,24 +62,28 @@ EXEC [ECX_SetRole_User]
 -- Création des Notes
 EXEC [ECX_Create_Note]
 @title = 'Ma première Note',
+@category = 'C#',
 @public = 1,
 @parentNote_ID = NULL,
 @user_ID = 1;
 
 EXEC [ECX_Create_Note]
 @title = 'Ma deuxième Note',
+@category = 'JS',
 @public = 0,
 @parentNote_ID = 1,
 @user_ID = 1;
 
 EXEC [ECX_Create_Note]
 @title = 'Ma troisième Note',
+@category = 'Html',
 @public = 1,
 @parentNote_ID = 1,
 @user_ID = 1;
 
 EXEC [ECX_Create_Note]
 @title = 'Ma quatrième Note',
+@category = 'C#',
 @public = 1,
 @parentNote_ID = NULL,
 @user_ID = 2;

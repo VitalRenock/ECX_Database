@@ -3,6 +3,7 @@
     -- Base
 	[ID] INT NOT NULL IDENTITY,
     [Title] NVARCHAR(200) NOT NULL,
+    [Category] NVARCHAR(20) NOT NULL DEFAULT 'Other',
 
     -- Visibility System (Private = 0 / Public = 1)
     [Public] BIT DEFAULT 0,

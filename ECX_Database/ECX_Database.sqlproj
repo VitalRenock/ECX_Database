@@ -115,6 +115,8 @@
     <Build Include="Programmability\Triggers\Trigger_Delete_Role.sql" />
     <Build Include="Programmability\StoredProcedures\RoleProcedures\ECX_Get_Role.sql" />
     <Build Include="Views\RoleViews\ECX_View_AllRoles.sql" />
+    <Build Include="Views\NoteViews\ECX_View_AllCategories.sql" />
+    <Build Include="Programmability\StoredProcedures\NoteProcedures\ECX_Get_PublicNotesByCategory.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment1.sql" />

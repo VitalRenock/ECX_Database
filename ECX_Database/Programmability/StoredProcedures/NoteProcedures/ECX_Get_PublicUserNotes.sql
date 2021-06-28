@@ -9,6 +9,7 @@ BEGIN
 		SELECT
 			[ID],
 			[Title],
+			[Category],
 			[Public],
 			[StateReview],
 			[CommentaryReview],

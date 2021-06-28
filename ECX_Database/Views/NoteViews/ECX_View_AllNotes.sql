@@ -3,6 +3,7 @@ AS
 	SELECT 
 		[ID],
 		[Title],
+		[Category],
 		[Public],
 		[StateReview],
 		[CommentaryReview],

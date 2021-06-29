@@ -62,7 +62,7 @@ EXEC [ECX_SetRole_User]
 -- Création des Notes
 EXEC [ECX_Create_Note]
 @title = 'Ma première Note',
-@category = 'C#',
+@category = 'CSharp',
 @public = 1,
 @parentNote_ID = NULL,
 @user_ID = 1;
@@ -83,7 +83,28 @@ EXEC [ECX_Create_Note]
 
 EXEC [ECX_Create_Note]
 @title = 'Ma quatrième Note',
-@category = 'C#',
+@category = 'CSharp',
+@public = 1,
+@parentNote_ID = NULL,
+@user_ID = 2;
+
+EXEC [ECX_Create_Note]
+@title = 'Ma cinqième Note',
+@category = 'Html',
+@public = 1,
+@parentNote_ID = NULL,
+@user_ID = 2;
+
+EXEC [ECX_Create_Note]
+@title = 'Ma sixième Note',
+@category = 'Html',
+@public = 1,
+@parentNote_ID = NULL,
+@user_ID = 2;
+
+EXEC [ECX_Create_Note]
+@title = 'Ma septième Note',
+@category = 'Html',
 @public = 1,
 @parentNote_ID = NULL,
 @user_ID = 2;
@@ -124,6 +145,42 @@ EXECUTE [ECX_Create_Component]
 @description = 'Description de test 4',
 @url = 'www.monsite.com',
 @public = 1,
+@user_ID = 1;
+
+EXECUTE [ECX_Create_Component] 
+@title = 'Mon cinquième Composant',
+@content = 'Contenu de test 4',
+@short = 'C#',
+@description = 'Description de test 4',
+@url = 'www.monsite.com',
+@public = 1,
+@user_ID = 2;
+
+EXECUTE [ECX_Create_Component] 
+@title = 'Mon sixième Composant',
+@content = 'Contenu de test 4',
+@short = 'C#',
+@description = 'Description de test 4',
+@url = 'www.monsite.com',
+@public = 0,
+@user_ID = 2;
+
+EXECUTE [ECX_Create_Component] 
+@title = 'Mon septième Composant',
+@content = 'Contenu de test 4',
+@short = 'C#',
+@description = 'Description de test 4',
+@url = 'www.monsite.com',
+@public = 1,
+@user_ID = 2;
+
+EXECUTE [ECX_Create_Component] 
+@title = 'Mon huitième Composant',
+@content = 'Contenu de test 4',
+@short = 'C#',
+@description = 'Description de test 4',
+@url = 'www.monsite.com',
+@public = 1,
 @user_ID = 2;
 
 
@@ -140,3 +197,23 @@ EXEC [ECX_Add_ComponentToNote]
 EXEC [ECX_Add_ComponentToNote]
 @note_ID = 1,
 @Component_ID = 3;
+
+EXEC [ECX_Add_ComponentToNote]
+@note_ID = 1,
+@Component_ID = 4;
+
+EXEC [ECX_Add_ComponentToNote]
+@note_ID = 4,
+@Component_ID = 5;
+
+EXEC [ECX_Add_ComponentToNote]
+@note_ID = 4,
+@Component_ID = 6;
+
+EXEC [ECX_Add_ComponentToNote]
+@note_ID = 4,
+@Component_ID = 7;
+
+EXEC [ECX_Add_ComponentToNote]
+@note_ID = 4,
+@Component_ID = 8;

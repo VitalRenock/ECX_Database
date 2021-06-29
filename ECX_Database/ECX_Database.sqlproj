@@ -117,6 +117,9 @@
     <Build Include="Views\RoleViews\ECX_View_AllRoles.sql" />
     <Build Include="Views\NoteViews\ECX_View_AllCategories.sql" />
     <Build Include="Programmability\StoredProcedures\NoteProcedures\ECX_Get_PublicNotesByCategory.sql" />
+    <Build Include="Programmability\StoredProcedures\NoteProcedures\ECX_Get_PublicNote.sql" />
+    <Build Include="Programmability\StoredProcedures\ComponentProcedures\ECX_Get_ComponentsByNote.sql" />
+    <Build Include="Programmability\StoredProcedures\ComponentProcedures\ECX_Get_PublicComponentsByNote.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment1.sql" />

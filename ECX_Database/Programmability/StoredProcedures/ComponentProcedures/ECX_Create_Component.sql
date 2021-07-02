@@ -9,7 +9,9 @@
 AS
 BEGIN
 	
-	INSERT INTO [Component]([Title], [Content], [Short], [Description], [Url], [Public], [User_ID]) VALUES
+	INSERT INTO [Component]([Title], [Content], [Short], [Description], [Url], [Public], [User_ID]) 
+	OUTPUT inserted.[ID]
+	VALUES
 	(
 		@title, 
 		@content, 

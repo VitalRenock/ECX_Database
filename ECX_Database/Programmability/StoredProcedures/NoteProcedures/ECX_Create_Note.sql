@@ -7,7 +7,15 @@
 AS
 BEGIN
 
-	INSERT INTO [Note]([Title], [Category], [Public], [ParentNote_ID], [User_ID]) VALUES
-	(@title, @category, @public, @parentNote_ID, @user_ID);
+	INSERT INTO [Note]([Title], [Category], [Public], [ParentNote_ID], [User_ID]) 
+	OUTPUT inserted.[ID]
+	VALUES
+	(
+		@title, 
+		@category, 
+		@public, 
+		@parentNote_ID, 
+		@user_ID
+	);
 
 END

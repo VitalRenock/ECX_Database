@@ -4,7 +4,12 @@
 AS
 BEGIN
 
-	INSERT INTO [NoteComposition]([Note_ID], [Component_ID]) VALUES
-	(@note_ID, @component_ID);
+	INSERT INTO [NoteComposition]([Note_ID], [Component_ID]) 
+	OUTPUT inserted.[ID]
+	VALUES
+	(
+		@note_ID, 
+		@component_ID
+	);
 
 END

@@ -121,6 +121,7 @@
     <Build Include="Programmability\StoredProcedures\ComponentProcedures\ECX_Get_ComponentsByNote.sql" />
     <Build Include="Programmability\StoredProcedures\ComponentProcedures\ECX_Get_PublicComponentsByNote.sql" />
     <Build Include="Programmability\StoredProcedures\ComponentProcedures\ECX_Get_UserComponent.sql" />
+    <Build Include="Programmability\StoredProcedures\UserProcedures\ECX_Get_UserById.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment1.sql" />

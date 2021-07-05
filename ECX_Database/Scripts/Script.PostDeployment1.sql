@@ -35,7 +35,7 @@ EXEC [ECX_SetRole_User]
 
 EXEC [ECX_Register_User] 
 @email = 'mexojer@mail.com', 
-@password = 'test=2222', 
+@password = 'test=1111', 
 @nickname = 'Mexojer', 
 @lastname = 'Thunus', 
 @firstname = 'Jérôme';
@@ -47,15 +47,17 @@ EXEC [ECX_SetRole_User]
 
 EXEC [ECX_Register_User] 
 @email = 'momo@mail.com', 
-@password = 'test=3333', 
+@password = 'test=1111', 
 @nickname = 'Momo', 
 @lastname = 'Lechat', 
 @firstname = 'Maurice';
 
-SET @user_id = (SELECT [ID] FROM [User] WHERE [Nickname] = 'Momo');
-EXEC [ECX_SetRole_User]
-@user_ID = @user_id,
-@role_name = 'Rédacteur';
+EXEC [ECX_Register_User] 
+@email = 'barnabe@mail.com', 
+@password = 'test=1111', 
+@nickname = 'Barbos', 
+@lastname = 'Dupont', 
+@firstname = 'Barnabé';
 
 
 
@@ -90,7 +92,7 @@ EXEC [ECX_Create_Note]
 
 EXEC [ECX_Create_Note]
 @title = 'Ma cinqième Note',
-@category = 'Html',
+@category = 'JS',
 @public = 1,
 @parentNote_ID = NULL,
 @user_ID = 2;
@@ -104,10 +106,24 @@ EXEC [ECX_Create_Note]
 
 EXEC [ECX_Create_Note]
 @title = 'Ma septième Note',
-@category = 'Html',
+@category = 'CSharp',
 @public = 1,
 @parentNote_ID = NULL,
-@user_ID = 2;
+@user_ID = 1;
+
+EXEC [ECX_Create_Note]
+@title = 'Ma huitième Note',
+@category = 'JS',
+@public = 0,
+@parentNote_ID = 1,
+@user_ID = 1;
+
+EXEC [ECX_Create_Note]
+@title = 'Ma neuvième Note',
+@category = 'Html',
+@public = 1,
+@parentNote_ID = 1,
+@user_ID = 1;
 
 
 -- Création des Composants

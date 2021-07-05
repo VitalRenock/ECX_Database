@@ -1,5 +1,5 @@
-﻿CREATE PROCEDURE [dbo].[ECX_Get_PublicUserComponents]
-	@user_id int
+﻿CREATE PROCEDURE [dbo].[ECX_GetAll_PublicComponents_ByUser]
+	@user_id INT
 AS
 BEGIN
 
@@ -10,11 +10,11 @@ BEGIN
 			[ID],
 			[Title],
 			[Content],
-			[Short],
 			[Description],
 			[Url],
 			[Public],
-			[User_ID]
+			[User_ID],
+			[Category_ID]
 		FROM [Component] 
 		WHERE [User_ID] = @user_id
 		AND [Enable] = 1

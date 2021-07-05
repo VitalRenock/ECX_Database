@@ -1,19 +1,19 @@
-﻿CREATE PROCEDURE [dbo].[ECX_Get_PublicNote]
-	@id INT
+﻿CREATE PROCEDURE [dbo].[ECX_Get_PublicNote_ById]
+	@note_id INT
 AS
 BEGIN
 	
 	SELECT
 		[ID],
 		[Title],
-		[Category],
 		[Public],
 		[StateReview],
 		[CommentaryReview],
 		[ParentNote_ID],
-		[User_ID]		
+		[User_ID],
+		[Category_ID]
 	FROM [Note]
-	WHERE [ID] = @id
+	WHERE [ID] = @note_id
 	AND [Public] = 1
 	AND [Enable] = 1
 

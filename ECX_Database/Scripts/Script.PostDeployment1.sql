@@ -61,143 +61,173 @@ EXEC [ECX_Register_User]
 
 
 
+-- Création des catégories
+EXEC [ECX_Create_Category]
+@name = 'CSharp',
+@color = '#111111',
+@short = 'C#',
+@description = 'Description du CSharp';
+
+EXEC [ECX_Create_Category]
+@name = 'TypeScript',
+@color = '#222222',
+@short = 'TS',
+@description = 'Description du TypeScript';
+
+EXEC [ECX_Create_Category]
+@name = 'Html',
+@color = '#333333',
+@short = 'HTML',
+@description = 'Description du HTML';
+
+
+
 -- Création des Notes
 EXEC [ECX_Create_Note]
 @title = 'Ma première Note',
-@category = 'CSharp',
 @public = 1,
 @parentNote_ID = NULL,
-@user_ID = 1;
+@user_ID = 1,
+@category_ID = 1;
 
 EXEC [ECX_Create_Note]
 @title = 'Ma deuxième Note',
-@category = 'JS',
 @public = 0,
 @parentNote_ID = 1,
-@user_ID = 1;
+@user_ID = 1,
+@category_ID = 2;
 
 EXEC [ECX_Create_Note]
 @title = 'Ma troisième Note',
-@category = 'Html',
 @public = 1,
 @parentNote_ID = 1,
-@user_ID = 1;
+@user_ID = 1,
+@category_ID = 3;
 
 EXEC [ECX_Create_Note]
 @title = 'Ma quatrième Note',
-@category = 'CSharp',
 @public = 1,
 @parentNote_ID = NULL,
-@user_ID = 2;
+@user_ID = 2,
+@category_ID = 1;
 
 EXEC [ECX_Create_Note]
 @title = 'Ma cinqième Note',
-@category = 'JS',
 @public = 1,
 @parentNote_ID = NULL,
-@user_ID = 2;
+@user_ID = 2,
+@category_ID = 2;
 
 EXEC [ECX_Create_Note]
 @title = 'Ma sixième Note',
-@category = 'Html',
 @public = 1,
 @parentNote_ID = NULL,
-@user_ID = 2;
+@user_ID = 2,
+@category_ID = 3;
 
 EXEC [ECX_Create_Note]
 @title = 'Ma septième Note',
-@category = 'CSharp',
 @public = 1,
 @parentNote_ID = NULL,
-@user_ID = 1;
+@user_ID = 1,
+@category_ID = 1;
 
 EXEC [ECX_Create_Note]
 @title = 'Ma huitième Note',
-@category = 'JS',
 @public = 0,
 @parentNote_ID = 1,
-@user_ID = 1;
+@user_ID = 1,
+@category_ID = 2;
 
 EXEC [ECX_Create_Note]
 @title = 'Ma neuvième Note',
-@category = 'Html',
 @public = 1,
 @parentNote_ID = 1,
-@user_ID = 1;
+@user_ID = 1,
+@category_ID = 3;
+
 
 
 -- Création des Composants
 EXECUTE [ECX_Create_Component] 
 @title = 'Mon premier Composant',
+@type = 'Image',
 @content = 'Contenu de test 1',
-@short = 'C#',
 @description = 'Description de test 1',
 @url = 'www.monsite.com',
 @public = 1,
-@user_ID = 1;
+@user_ID = 1,
+@category_ID = 1;
 
 EXECUTE [ECX_Create_Component] 
 @title = 'Mon deuxième Composant',
+@type = 'Image',
 @content = 'Contenu de test 2',
-@short = 'C#',
 @description = 'Description de test 2',
 @url = 'www.monsite.com',
 @public = 0,
-@user_ID = 1;
+@user_ID = 1,
+@category_ID = 1;
 
 EXECUTE [ECX_Create_Component] 
 @title = 'Mon troisième Composant',
+@type = 'Image',
 @content = 'Contenu de test 3',
-@short = 'C#',
 @description = 'Description de test 3',
 @url = 'www.monsite.com',
 @public = 1,
-@user_ID = 1;
+@user_ID = 1,
+@category_ID = 1;
 
 EXECUTE [ECX_Create_Component] 
 @title = 'Mon quatrième Composant',
+@type = 'Image',
 @content = 'Contenu de test 4',
-@short = 'C#',
 @description = 'Description de test 4',
 @url = 'www.monsite.com',
 @public = 1,
-@user_ID = 1;
+@user_ID = 1,
+@category_ID = 1;
 
 EXECUTE [ECX_Create_Component] 
 @title = 'Mon cinquième Composant',
+@type = 'Image',
 @content = 'Contenu de test 4',
-@short = 'C#',
 @description = 'Description de test 4',
 @url = 'www.monsite.com',
 @public = 1,
-@user_ID = 2;
+@user_ID = 2,
+@category_ID = 1;
 
 EXECUTE [ECX_Create_Component] 
 @title = 'Mon sixième Composant',
+@type = 'Image',
 @content = 'Contenu de test 4',
-@short = 'C#',
 @description = 'Description de test 4',
 @url = 'www.monsite.com',
 @public = 0,
-@user_ID = 2;
+@user_ID = 2,
+@category_ID = 1;
 
 EXECUTE [ECX_Create_Component] 
 @title = 'Mon septième Composant',
+@type = 'Image',
 @content = 'Contenu de test 4',
-@short = 'C#',
 @description = 'Description de test 4',
 @url = 'www.monsite.com',
 @public = 1,
-@user_ID = 2;
+@user_ID = 2,
+@category_ID = 1;
 
 EXECUTE [ECX_Create_Component] 
 @title = 'Mon huitième Composant',
+@type = 'Image',
 @content = 'Contenu de test 4',
-@short = 'C#',
 @description = 'Description de test 4',
 @url = 'www.monsite.com',
 @public = 1,
-@user_ID = 2;
+@user_ID = 2,
+@category_ID = 1;
 
 
 

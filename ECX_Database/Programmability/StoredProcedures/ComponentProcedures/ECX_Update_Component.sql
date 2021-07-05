@@ -1,20 +1,22 @@
 ﻿CREATE PROCEDURE [dbo].[ECX_Update_Component]
 	@component_id INT,
 	@title NVARCHAR(200),
+	@type NVARCHAR(20),
 	@content NVARCHAR(MAX),
-	@short NVARCHAR(20),
-	@description NVARCHAR(200),
-	@url NVARCHAR(200)
+	@description NVARCHAR(MAX),
+	@url NVARCHAR(200),
+	@category_ID INT
 AS
 BEGIN
 	
 	UPDATE [Component] 
 	SET
 		[Title] = @title,
+		[Type] = @type,
 		[Content] = @content,
-		[Short] = @short,
 		[Description] = @description,
-		[Url] = @url
+		[Url] = @url,
+		[Category_ID] = @category_ID
 	WHERE [ID] = @component_id;
 
 END

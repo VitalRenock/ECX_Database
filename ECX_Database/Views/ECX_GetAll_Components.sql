@@ -1,13 +1,13 @@
-﻿CREATE VIEW [dbo].[ECX_View_AllComponents]
+﻿CREATE VIEW [dbo].[ECX_GetAll_Components]
 AS 
 	SELECT 
 		[ID],
 		[Title],
 		[Content],
-		[Short],
 		[Description],
 		[Url],
 		[Public],
-		[User_ID]
+		[User_ID],
+		[Category_ID]
 	FROM [Component]
 	WHERE [Enable] = 1;

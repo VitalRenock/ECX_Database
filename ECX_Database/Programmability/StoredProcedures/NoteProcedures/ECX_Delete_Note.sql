@@ -1,5 +1,5 @@
 ﻿CREATE PROCEDURE [dbo].[ECX_Delete_Note]
-	@note_id int
+	@note_id INT
 AS
 BEGIN
 

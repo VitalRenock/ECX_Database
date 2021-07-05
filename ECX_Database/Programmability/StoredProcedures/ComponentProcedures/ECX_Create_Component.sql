@@ -1,25 +1,27 @@
 ﻿CREATE PROCEDURE [dbo].[ECX_Create_Component]
 	@title NVARCHAR(200),
+	@type NVARCHAR(20),
 	@content NVARCHAR(MAX),
-	@short NVARCHAR(20),
-	@description NVARCHAR(200),
+	@description NVARCHAR(MAX),
 	@url NVARCHAR(200),
 	@public BIT,
-	@user_ID INT
+	@user_ID INT,
+	@category_ID INT
 AS
 BEGIN
 	
-	INSERT INTO [Component]([Title], [Content], [Short], [Description], [Url], [Public], [User_ID]) 
+	INSERT INTO [Component]([Title], [Type], [Content], [Description], [Url], [Public], [User_ID], [Category_ID]) 
 	OUTPUT inserted.[ID]
 	VALUES
 	(
-		@title, 
+		@title,
+		@type,
 		@content, 
-		@short, 
 		@description, 
 		@url, 
 		@public, 
-		@user_ID
+		@user_ID,
+		@category_ID
 	);
 
 END

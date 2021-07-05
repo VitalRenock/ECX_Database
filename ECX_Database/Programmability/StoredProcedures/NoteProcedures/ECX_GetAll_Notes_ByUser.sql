@@ -1,5 +1,5 @@
-﻿CREATE PROCEDURE [dbo].[ECX_Get_AllUserNotes]
-	@user_id int
+﻿CREATE PROCEDURE [dbo].[ECX_GetAll_Notes_ByUser]
+	@user_id INT
 AS
 BEGIN
 
@@ -9,12 +9,12 @@ BEGIN
 		SELECT
 			[ID],
 			[Title],
-			[Category],
 			[Public],
 			[StateReview],
 			[CommentaryReview],
 			[ParentNote_ID],
-			[User_ID]
+			[User_ID],
+			[Category_ID]
 		FROM [Note] 
 		WHERE [User_ID] = @user_id
 		AND [Enable] = 1;

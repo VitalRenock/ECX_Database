@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[ECX_Get_UserComponent]
+﻿CREATE PROCEDURE [dbo].[ECX_Get_Component_ById]
 	@compo_id INT
 AS
 BEGIN
@@ -10,11 +10,11 @@ BEGIN
 			[ID],
 			[Title],
 			[Content],
-			[Short],
 			[Description],
 			[Url],
 			[Public],
-			[User_ID]
+			[User_ID],
+			[Category_ID]
 		FROM [Component] 
 		WHERE [ID] = @compo_id
 		AND [Enable] = 1;

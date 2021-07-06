@@ -1,17 +1,17 @@
 ﻿-- Création des Rôles
 EXEC [ECX_Create_Role]
 @name = 'Administrateur',
-@color = '#333333',
+@color = '#F94144',
 @description = 'Responsable des Utilisateurs et Notes du site.';
 
 EXEC [ECX_Create_Role]
 @name = 'Modérateur',
-@color = '#666666',
+@color = '#F9844A6',
 @description = 'En charge de la modération des Notes du site';
 
 EXEC [ECX_Create_Role]
 @name = 'Rédacteur',
-@color = '#999999',
+@color = '#43AA8B',
 @description = 'En charge de la rédaction des Notes du site';
 
 
@@ -52,6 +52,7 @@ EXEC [ECX_Register_User]
 @lastname = 'Lechat', 
 @firstname = 'Maurice';
 
+-- Par défaut Rédacteur
 EXEC [ECX_Register_User] 
 @email = 'barnabe@mail.com', 
 @password = 'test=1111', 
@@ -64,32 +65,61 @@ EXEC [ECX_Register_User]
 -- Création des catégories
 EXEC [ECX_Create_Category]
 @name = 'CSharp',
-@color = '#111111',
+@color = '#F94144',
 @short = 'C#',
-@description = 'Description du CSharp';
+@description = 'Le "C Sharp" est un langage de programmation orientée objet, commercialisé par Microsoft depuis 20023 et destiné à développer sur la plateforme Microsoft .NET. ';
 
 EXEC [ECX_Create_Category]
 @name = 'TypeScript',
-@color = '#222222',
+@color = '#F8961E',
 @short = 'TS',
-@description = 'Description du TypeScript';
+@description = 'TypeScript est un langage de programmation libre et open source développé par Microsoft qui a pour but d''améliorer et de sécuriser la production de code JavaScript.';
 
 EXEC [ECX_Create_Category]
-@name = 'Html',
-@color = '#333333',
+@name = 'Hypertext Markup Language',
+@color = '#F9C74F',
 @short = 'HTML',
-@description = 'Description du HTML';
+@description = 'Le HyperText Markup Language, généralement abrégé HTML ou dans sa dernière version HTML5, est le langage de balisage conçu pour représenter les pages web.';
+
+EXEC [ECX_Create_Category]
+@name = 'Programmation Orienté Objet',
+@color = '#43AA8B',
+@short = 'POO',
+@description = 'La programmation orientée objet est un paradigme de programmation. Elle consiste en la définition et l''interaction de briques logicielles appelées objets. Un objet représente un concept, une idée ou toute entité du monde physique.';
+
+EXEC [ECX_Create_Category]
+@name = 'Cuisine',
+@color = '#577590',
+@short = 'Food',
+@description = 'La cuisine est l''ensemble des techniques de préparation des aliments en vue de leur consommation par les êtres humains. La cuisine est diverse à travers le monde.';
+
+
+-- Note 1
+EXEC [ECX_Create_Note]
+@title = 'Les variables',
+@public = 1,
+@parentNote_ID = NULL,
+@user_ID = 1,
+@category_ID = 4;
+EXECUTE [ECX_Create_Component] 
+@title = 'Définition d''une variable',
+@type = 'Texte',
+@content = '',
+@description = 'Une variable est un élément de programmation auquel on affecte une valeur particulière pouvant être modifiée au cours d''un algorithme.',
+@url = '',
+@public = 1,
+@user_ID = 1,
+@category_ID = 3;
+EXEC [ECX_Add_ComponentToNote]
+@note_ID = 1,
+@Component_ID = 1;
+
+
+
 
 
 
 -- Création des Notes
-EXEC [ECX_Create_Note]
-@title = 'Ma première Note',
-@public = 1,
-@parentNote_ID = NULL,
-@user_ID = 1,
-@category_ID = 1;
-
 EXEC [ECX_Create_Note]
 @title = 'Ma deuxième Note',
 @public = 0,
@@ -149,15 +179,7 @@ EXEC [ECX_Create_Note]
 
 
 -- Création des Composants
-EXECUTE [ECX_Create_Component] 
-@title = 'Mon premier Composant',
-@type = 'Image',
-@content = 'Contenu de test 1',
-@description = 'Description de test 1',
-@url = 'www.monsite.com',
-@public = 1,
-@user_ID = 1,
-@category_ID = 1;
+
 
 EXECUTE [ECX_Create_Component] 
 @title = 'Mon deuxième Composant',
@@ -232,9 +254,7 @@ EXECUTE [ECX_Create_Component]
 
 
 -- Composition des Notes
-EXEC [ECX_Add_ComponentToNote]
-@note_ID = 1,
-@Component_ID = 1;
+
 
 EXEC [ECX_Add_ComponentToNote]
 @note_ID = 1,

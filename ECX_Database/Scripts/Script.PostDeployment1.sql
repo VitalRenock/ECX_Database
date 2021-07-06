@@ -94,6 +94,14 @@ EXEC [ECX_Create_Category]
 @description = 'La cuisine est l''ensemble des techniques de préparation des aliments en vue de leur consommation par les êtres humains. La cuisine est diverse à travers le monde.';
 
 
+
+--•Les variables
+--•Les opérateurs conditionnels
+--•Les structures conditionnelles
+--•Les structures itératives
+--•Les tableaux
+
+
 -- Note 1
 EXEC [ECX_Create_Note]
 @title = 'Les variables',
@@ -101,6 +109,7 @@ EXEC [ECX_Create_Note]
 @parentNote_ID = NULL,
 @user_ID = 1,
 @category_ID = 4;
+
 EXECUTE [ECX_Create_Component] 
 @title = 'Définition d''une variable',
 @type = 'Texte',
@@ -109,37 +118,202 @@ EXECUTE [ECX_Create_Component]
 @url = '',
 @public = 1,
 @user_ID = 1,
-@category_ID = 3;
+@category_ID = 4;
 EXEC [ECX_Add_ComponentToNote]
 @note_ID = 1,
 @Component_ID = 1;
 
+EXECUTE [ECX_Create_Component] 
+@title = 'Déclarer une variable',
+@type = 'Texte',
+@content = 'Variable identificateur: Type',
+@description = 'Déclarer une variable consiste à réserver un emplacement en mémoire afin de pouvoir l’utiliser par la suite. Pour déclarer une variable, il nous faut spécifier 2 choses: son nom et son type. Il est important de choisir un nom cohérent qui permet de facilement comprendre l’utilité de la variable.',
+@url = '',
+@public = 1,
+@user_ID = 1,
+@category_ID = 4;
+EXEC [ECX_Add_ComponentToNote]
+@note_ID = 1,
+@Component_ID = 2;
+
+EXECUTE [ECX_Create_Component] 
+@title = 'Bonnes pratiques',
+@type = 'Text',
+@content = '',
+@description = 'Le choix des noms de variable doit rester cohérent. À la relecture de l’algorithme, il doit être possible de comprendre le sens d’une variable en fonction de son nom. L’alphabet n’est pas une bonne idée. Éviter les accents pour des raisons informatiques. Les langages sont écrits en anglais, et cette langue ne comprend pas les accents. Une bonne pratique est d’utiliser le «lowerCamelCase» ou le «UpperCamelCase». Le choix dépend des conventions que certains langages utilisent. En C#, c’est le «UpperCamelCase» qui est principalement utilisé.',
+@url = '',
+@public = 1,
+@user_ID = 1,
+@category_ID = 4;
+EXEC [ECX_Add_ComponentToNote]
+@note_ID = 1,
+@Component_ID = 3;
+
+EXECUTE [ECX_Create_Component] 
+@title = 'Pour aller plus loin...',
+@type = 'Link',
+@content = '',
+@description = '',
+@url = 'https://fr.wikipedia.org/wiki/Variable_(informatique)',
+@public = 1,
+@user_ID = 1,
+@category_ID = 4;
+EXEC [ECX_Add_ComponentToNote]
+@note_ID = 1,
+@Component_ID = 4;
+
+
+
+-- Note 2
+EXEC [ECX_Create_Note]
+@title = 'Les variables en C#',
+@public = 1,
+@parentNote_ID = 1,
+@user_ID = 2,
+@category_ID = 2;
+
+EXECUTE [ECX_Create_Component] 
+@title = 'Nommer ses variables',
+@type = 'Text',
+@content = '',
+@description = 'Le nom d''une variable est obligatoirement écrit avec des caractères alphanumériques (de préférence sans accent), ainsi que le underscore (sans les apostrophes)',
+@url = '',
+@public = 1,
+@user_ID = 2,
+@category_ID = 1;
+EXEC [ECX_Add_ComponentToNote]
+@note_ID = 2,
+@Component_ID = 5;
+
+EXECUTE [ECX_Create_Component] 
+@title = 'Types de variables de base',
+@type = 'Code',
+@content = 'sbyte (-128 à 127), short (-32 768 à 32 767), int (-2 147 483 648 à 2 147 483 647), long (-9 223 372 036 854 775 808 à -9 223 372 036 854 775 807), float (-3,4028235E+38 à 3,4028234E+38), double (-1,79769313486231570E+308 à 1,7976931348623157E+308), bool (True / False), string (de 0 à 2 147 483 648 caractères)',
+@description = '',
+@url = '',
+@public = 1,
+@user_ID = 2,
+@category_ID = 1;
+EXEC [ECX_Add_ComponentToNote]
+@note_ID = 2,
+@Component_ID = 6;
+
+EXECUTE [ECX_Create_Component] 
+@title = 'Mon septième Composant',
+@type = 'Image',
+@content = 'Contenu de test 4',
+@description = 'Description de test 4',
+@url = 'www.monsite.com',
+@public = 1,
+@user_ID = 2,
+@category_ID = 1;
+EXEC [ECX_Add_ComponentToNote]
+@note_ID = 2,
+@Component_ID = 7;
+
+EXECUTE [ECX_Create_Component] 
+@title = 'Mon huitième Composant',
+@type = 'Image',
+@content = 'Contenu de test 4',
+@description = 'Description de test 4',
+@url = 'www.monsite.com',
+@public = 1,
+@user_ID = 2,
+@category_ID = 1;
+EXEC [ECX_Add_ComponentToNote]
+@note_ID = 2,
+@Component_ID = 8;
+
+EXECUTE [ECX_Create_Component] 
+@title = 'Type valeur',
+@type = 'Text',
+@content = '',
+@description = 'Une variable de type valeurcontient directement l''information. Cela signifie que lorsque cette variable est modifiée, la valeur qu''elle contenait est aussi modifiée. Cela ne m''a pas paru indispensable de vous apprendre à créer des structures, par contre il faut que vous connaissiez des structures élémentaires. Les types numériques de base sont des structures, donc se comportent comme des types valeur. Le type string est un peu spécial : c''est une classe, mais elle se comporte comme un type valeur.',
+@url = '',
+@public = 1,
+@user_ID = 2,
+@category_ID = 1;
+EXEC [ECX_Add_ComponentToNote]
+@note_ID = 2,
+@Component_ID = 9;
+
+EXECUTE [ECX_Create_Component] 
+@title = 'Type référence',
+@type = 'Text',
+@content = '',
+@description = 'Une variable de type référencecontient l''adresse de l''emplacement mémoire où se trouve l''information. Du coup, une variable qui a la même référence qu''une seconde variable peut être automatiquement changée quand la seconde variable est modifiée. Nous verrons tout cela bien plus en détail avec les classes. Je voulais juste introduire cette notion car c''est quelque chose de fondamental et je pense que plus c''est pris tôt, plus vous aurez le temps d''y revenir petit à petit pour bien cerner le concept.',
+@url = '',
+@public = 1,
+@user_ID = 2,
+@category_ID = 1;
+EXEC [ECX_Add_ComponentToNote]
+@note_ID = 2,
+@Component_ID = 10;
+
+
+
+-- Note 3
+EXEC [ECX_Create_Note]
+@title = 'Type Valeur ou Reference?',
+@public = 1,
+@parentNote_ID = 1,
+@user_ID = 1,
+@category_ID = 3;
+
+EXEC [ECX_Add_ComponentToNote]
+@note_ID = 3,
+@Component_ID = 9;
+EXEC [ECX_Add_ComponentToNote]
+@note_ID = 3,
+@Component_ID = 10;
+EXEC [ECX_Add_ComponentToNote]
+@note_ID = 1,
+@Component_ID = 9;
+EXEC [ECX_Add_ComponentToNote]
+@note_ID = 1,
+@Component_ID = 10;
+
+
+
+-- Note 4
+EXEC [ECX_Create_Note]
+@title = 'Les énumérations',
+@public = 1,
+@parentNote_ID = NULL,
+@user_ID = 1,
+@category_ID = 1;
+
+EXECUTE [ECX_Create_Component] 
+@title = 'C''est quoi?',
+@type = 'Text',
+@content = 'enum Weather { Unknown, Sunny, Cloudy, Rainy }',
+@description = 'Une énumération est une liste de valeurs qui a un type unique. Ce type est le nom de l''énumération. Un exemple vaut toujours plus qu''un long discours donc voyez plutôt comment déclarer une énumération désignant les différents temps (dans l''ordre : inconnu, ensoleillé, nuageux, pluvieux)',
+@url = '',
+@public = 1,
+@user_ID = 1,
+@category_ID = 1;
+EXEC [ECX_Add_ComponentToNote]
+@note_ID = 4,
+@Component_ID = 11;
+
+EXECUTE [ECX_Create_Component] 
+@title = 'Attention!',
+@type = 'Text',
+@content = '',
+@description = 'Vous ne pouvez pas mettre des énumérations où vous voulez. Une énumération se déclare en tant que membre d''une classe (ou en-dehors d''une classe), et non pas dans une méthode.',
+@url = '',
+@public = 1,
+@user_ID = 1,
+@category_ID = 1;
+EXEC [ECX_Add_ComponentToNote]
+@note_ID = 4,
+@Component_ID = 12;
 
 
 
 
 
 -- Création des Notes
-EXEC [ECX_Create_Note]
-@title = 'Ma deuxième Note',
-@public = 0,
-@parentNote_ID = 1,
-@user_ID = 1,
-@category_ID = 2;
-
-EXEC [ECX_Create_Note]
-@title = 'Ma troisième Note',
-@public = 1,
-@parentNote_ID = 1,
-@user_ID = 1,
-@category_ID = 3;
-
-EXEC [ECX_Create_Note]
-@title = 'Ma quatrième Note',
-@public = 1,
-@parentNote_ID = NULL,
-@user_ID = 2,
-@category_ID = 1;
 
 EXEC [ECX_Create_Note]
 @title = 'Ma cinqième Note',
@@ -175,111 +349,3 @@ EXEC [ECX_Create_Note]
 @parentNote_ID = 1,
 @user_ID = 1,
 @category_ID = 3;
-
-
-
--- Création des Composants
-
-
-EXECUTE [ECX_Create_Component] 
-@title = 'Mon deuxième Composant',
-@type = 'Image',
-@content = 'Contenu de test 2',
-@description = 'Description de test 2',
-@url = 'www.monsite.com',
-@public = 0,
-@user_ID = 1,
-@category_ID = 1;
-
-EXECUTE [ECX_Create_Component] 
-@title = 'Mon troisième Composant',
-@type = 'Image',
-@content = 'Contenu de test 3',
-@description = 'Description de test 3',
-@url = 'www.monsite.com',
-@public = 1,
-@user_ID = 1,
-@category_ID = 1;
-
-EXECUTE [ECX_Create_Component] 
-@title = 'Mon quatrième Composant',
-@type = 'Image',
-@content = 'Contenu de test 4',
-@description = 'Description de test 4',
-@url = 'www.monsite.com',
-@public = 1,
-@user_ID = 1,
-@category_ID = 1;
-
-EXECUTE [ECX_Create_Component] 
-@title = 'Mon cinquième Composant',
-@type = 'Image',
-@content = 'Contenu de test 4',
-@description = 'Description de test 4',
-@url = 'www.monsite.com',
-@public = 1,
-@user_ID = 2,
-@category_ID = 1;
-
-EXECUTE [ECX_Create_Component] 
-@title = 'Mon sixième Composant',
-@type = 'Image',
-@content = 'Contenu de test 4',
-@description = 'Description de test 4',
-@url = 'www.monsite.com',
-@public = 0,
-@user_ID = 2,
-@category_ID = 1;
-
-EXECUTE [ECX_Create_Component] 
-@title = 'Mon septième Composant',
-@type = 'Image',
-@content = 'Contenu de test 4',
-@description = 'Description de test 4',
-@url = 'www.monsite.com',
-@public = 1,
-@user_ID = 2,
-@category_ID = 1;
-
-EXECUTE [ECX_Create_Component] 
-@title = 'Mon huitième Composant',
-@type = 'Image',
-@content = 'Contenu de test 4',
-@description = 'Description de test 4',
-@url = 'www.monsite.com',
-@public = 1,
-@user_ID = 2,
-@category_ID = 1;
-
-
-
--- Composition des Notes
-
-
-EXEC [ECX_Add_ComponentToNote]
-@note_ID = 1,
-@Component_ID = 2;
-
-EXEC [ECX_Add_ComponentToNote]
-@note_ID = 1,
-@Component_ID = 3;
-
-EXEC [ECX_Add_ComponentToNote]
-@note_ID = 1,
-@Component_ID = 4;
-
-EXEC [ECX_Add_ComponentToNote]
-@note_ID = 4,
-@Component_ID = 5;
-
-EXEC [ECX_Add_ComponentToNote]
-@note_ID = 4,
-@Component_ID = 6;
-
-EXEC [ECX_Add_ComponentToNote]
-@note_ID = 4,
-@Component_ID = 7;
-
-EXEC [ECX_Add_ComponentToNote]
-@note_ID = 4,
-@Component_ID = 8;

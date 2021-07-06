@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[ECX_Get_CategoryById]
+﻿CREATE PROCEDURE [dbo].[ECX_Get_Category_ById]
 	@category_id INT
 AS
 BEGIN

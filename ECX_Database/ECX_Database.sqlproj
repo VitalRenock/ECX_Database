@@ -65,13 +65,9 @@
     <Folder Include="Programmability\StoredProcedures\ComponentProcedures" />
     <Folder Include="Programmability\StoredProcedures\NoteProcedures" />
     <Folder Include="Programmability\StoredProcedures\NoteCompoProcedures" />
-    <Folder Include="Views\UserViews" />
-    <Folder Include="Views\NoteViews" />
     <Folder Include="Programmability\Triggers" />
     <Folder Include="Programmability\StoredProcedures\Testing" />
-    <Folder Include="Views\RoleViews" />
     <Folder Include="Programmability\StoredProcedures\CategoryProcedures" />
-    <Folder Include="Views\CategoryViews" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Programmability\Functions\ECX_GetPreSalt.sql" />
@@ -88,8 +84,6 @@
     <Build Include="Programmability\StoredProcedures\ComponentProcedures\ECX_Create_Component.sql" />
     <Build Include="Programmability\StoredProcedures\NoteProcedures\ECX_Create_Note.sql" />
     <Build Include="Programmability\StoredProcedures\NoteCompoProcedures\ECX_Add_ComponentToNote.sql" />
-    <Build Include="Views\UserViews\ECX_View_AllUsers.sql" />
-    <Build Include="Views\NoteViews\ECX_View_AllNotes.sql" />
     <Build Include="Programmability\StoredProcedures\UserProcedures\ECX_Login_User.sql" />
     <Build Include="Programmability\StoredProcedures\UserProcedures\ECX_Delete_User.sql" />
     <Build Include="Programmability\Triggers\Trigger_Delete_User.sql" />
@@ -114,7 +108,6 @@
     <Build Include="Programmability\StoredProcedures\RoleProcedures\ECX_Delete_Role.sql" />
     <Build Include="Programmability\Triggers\Trigger_Delete_Role.sql" />
     <Build Include="Programmability\StoredProcedures\RoleProcedures\ECX_Get_Role.sql" />
-    <Build Include="Views\RoleViews\ECX_View_AllRoles.sql" />
     <Build Include="Programmability\StoredProcedures\NoteProcedures\ECX_GetAll_PublicNotes_ByCategory.sql" />
     <Build Include="Programmability\StoredProcedures\NoteProcedures\ECX_Get_PublicNote_ById.sql" />
     <Build Include="Programmability\StoredProcedures\ComponentProcedures\ECX_GetAll_Components_ByNote.sql" />
@@ -127,9 +120,12 @@
     <Build Include="Programmability\StoredProcedures\CategoryProcedures\ECX_Delete_Category.sql" />
     <Build Include="Programmability\Triggers\Trigger_Delete_Category.sql" />
     <Build Include="Programmability\StoredProcedures\CategoryProcedures\ECX_Update_Category.sql" />
-    <Build Include="Programmability\StoredProcedures\CategoryProcedures\ECX_Get_CategoryById.sql" />
-    <Build Include="Views\CategoryViews\ECX_View_AllCategories.sql" />
+    <Build Include="Programmability\StoredProcedures\CategoryProcedures\ECX_Get_Category_ById.sql" />
     <Build Include="Views\ECX_GetAll_Components.sql" />
+    <Build Include="Views\ECX_GetAll_Roles.sql" />
+    <Build Include="Views\ECX_GetAll_Users.sql" />
+    <Build Include="Views\ECX_GetAll_Notes.sql" />
+    <Build Include="Views\ECX_GetAll_Categories.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment1.sql" />

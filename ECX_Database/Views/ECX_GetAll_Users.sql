@@ -1,4 +1,4 @@
-﻿CREATE VIEW [dbo].[ECX_View_AllUsers]
+﻿CREATE VIEW [dbo].[ECX_GetAll_Users]
 AS 
 	SELECT 
 		U.[ID], 

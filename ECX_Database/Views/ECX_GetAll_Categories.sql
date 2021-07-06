@@ -1,4 +1,4 @@
-﻿CREATE VIEW [dbo].[ECX_View_AllCategories]
+﻿CREATE VIEW [dbo].[ECX_GetAll_Categories]
 AS
 	SELECT
 		[ID],

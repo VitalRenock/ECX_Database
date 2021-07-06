@@ -3,6 +3,7 @@ AS
 	SELECT 
 		[ID],
 		[Title],
+		[Type],
 		[Content],
 		[Description],
 		[Url],

@@ -15,10 +15,9 @@ BEGIN
 			C.[Url],
 			C.[Public],
 			C.[User_ID],
-			CA.[Name]
+			C.[Category_ID]
 		FROM [NoteComposition] NC
 		LEFT JOIN [Component] C ON C.[ID] = NC.[Component_ID]
-		LEFT JOIN [Category] CA ON C.[Category_ID] = CA.[Id] 
 		WHERE NC.[Note_ID] = @note_id
 		AND C.[Enable] = 1;
 

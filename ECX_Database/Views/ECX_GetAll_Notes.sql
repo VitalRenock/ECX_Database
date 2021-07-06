@@ -1,4 +1,4 @@
-﻿CREATE VIEW [dbo].[ECX_View_AllNotes]
+﻿CREATE VIEW [dbo].[ECX_GetAll_Notes]
 AS 
 	SELECT 
 		[ID],

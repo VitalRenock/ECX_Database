@@ -9,6 +9,7 @@ BEGIN
 		SELECT
 			C.[ID],
 			C.[Title],
+			C.[Type],
 			C.[Content],
 			C.[Description],
 			C.[Url],

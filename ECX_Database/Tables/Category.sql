@@ -11,5 +11,5 @@
     [Enable] BIT NOT NULL DEFAULT 1,
 
 	-- Constraints
-    CONSTRAINT [PK_Category] PRIMARY KEY ([Id]) 
+    CONSTRAINT [PK_Category] PRIMARY KEY ([ID]) 
 );

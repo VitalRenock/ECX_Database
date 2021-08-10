@@ -16,6 +16,7 @@ EXEC [ECX_Create_Role]
 
 
 
+
 -- Création des Utilisateurs
 
 --EXEC [ECX_Populate_User]
@@ -183,6 +184,9 @@ EXECUTE [ECX_Create_Component]
 @category_ID = 1;
 EXEC [ECX_Add_ComponentToNote]
 @note_ID = 2,
+@Component_ID = 5;
+EXEC [ECX_Add_ComponentToNote]
+@note_ID = 1,
 @Component_ID = 5;
 
 EXECUTE [ECX_Create_Component] 

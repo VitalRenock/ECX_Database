@@ -2,6 +2,7 @@
 (
 	-- Base
 	[ID] INT NOT NULL IDENTITY,
+	[Order] INT NOT NULL DEFAULT(0),
 
 	-- Foreign Keys
 	[Note_ID] INT NOT NULL,
@@ -10,5 +11,5 @@
 	-- Constraints
     CONSTRAINT [PK_NoteComposition] PRIMARY KEY ([ID]),
 	CONSTRAINT [FK_NoteComposition_Note] FOREIGN KEY ([Note_ID]) REFERENCES [Note]([ID]),
-	CONSTRAINT [FK_NoteComposition_Component] FOREIGN KEY ([Component_ID]) REFERENCES [Component]([ID])
+	CONSTRAINT [FK_NoteComposition_Component] FOREIGN KEY ([Component_ID]) REFERENCES [Component]([ID]) 
 );

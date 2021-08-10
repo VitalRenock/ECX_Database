@@ -15,7 +15,8 @@ BEGIN
 			C.[Url],
 			C.[Public],
 			C.[User_ID],
-			C.[Category_ID]
+			C.[Category_ID],
+			NC.[Order]
 		FROM [NoteComposition] NC
 		LEFT JOIN [Component] C ON C.[ID] = NC.[Component_ID]
 		WHERE NC.[Note_ID] = @note_id

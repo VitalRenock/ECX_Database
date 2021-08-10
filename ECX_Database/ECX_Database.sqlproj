@@ -126,6 +126,7 @@
     <Build Include="Views\ECX_GetAll_Users.sql" />
     <Build Include="Views\ECX_GetAll_Notes.sql" />
     <Build Include="Views\ECX_GetAll_Categories.sql" />
+    <Build Include="Programmability\StoredProcedures\NoteCompoProcedures\ECX_Switch_ComponentsOrder_ByNote.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment1.sql" />
